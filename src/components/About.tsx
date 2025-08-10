@@ -24,7 +24,7 @@ const About = () => {
 
           {/* Company Description */}
           <div className="mb-12 sm:mb-16">
-            <Card className="shadow-card border-0 bg-gradient-to-br from-secondary/50 to-background">
+            <Card className="shadow-card border-0 bg-green-50">
               <CardContent className="p-8">
                 <p className="text-lg text-foreground leading-relaxed text-center">
                   MARS DRC, Sarl a été créé le <strong>8 mars 2020</strong> pour

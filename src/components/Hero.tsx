@@ -45,7 +45,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16">
             <Button
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-glow group"
+              className="bg-orange-500 hover:bg-orange-600 text-white shadow-lg shadow-orange-500/30 group"
             >
               Découvrir nos services
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
