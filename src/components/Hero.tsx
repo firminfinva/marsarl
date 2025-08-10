@@ -1,0 +1,99 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Award, Users, Globe } from "lucide-react";
+
+const Hero = () => {
+  return (
+    <section
+      id="accueil"
+      className="pt-16 min-h-screen bg-gradient-hero relative overflow-hidden"
+    >
+      {/* Motif en grille */}
+      <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
+
+      {/* Logo plein écran en arrière-plan */}
+      <div
+        className="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-10"
+        style={{ backgroundImage: "url('/logo.png')" }}
+      />
+
+      <div className="container-responsive py-12 sm:py-16 lg:py-20 relative z-10">
+        <div className="max-w-4xl mx-auto text-center text-white">
+          {/* Titre principal */}
+          <h1 className="text-responsive-xl font-bold mb-4 sm:mb-6 leading-tight">
+            Excellence en
+            <span className="block bg-gradient-to-r from-accent to-yellow-200 bg-clip-text text-transparent">
+              Prestations Intellectuelles
+            </span>
+          </h1>
+
+          {/* Slogan */}
+          <p className="text-responsive-md mb-3 sm:mb-4 text-gray-200 font-medium">
+            "Sans vous, nous n'existons pas, c'est donc votre performance qui
+            donne un sens à notre existence !!!"
+          </p>
+
+          {/* Description */}
+          <p className="text-responsive-md mb-6 sm:mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
+            MARS DRC SARL est un cabinet d'expertise spécialisé dans les
+            prestations intellectuelles et la production des services techniques
+            au profit des entreprises du secteur public et privé.
+          </p>
+
+          {/* Boutons CTA */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16">
+            <Button
+              size="lg"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-glow group"
+            >
+              Découvrir nos services
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white/30 text-black bg-white hover:bg-gray-100 hover:border-white"
+            >
+              Nous contacter
+            </Button>
+          </div>
+
+          {/* Statistiques */}
+          <div className="grid-responsive-3 max-w-2xl mx-auto">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="h-8 w-8 text-orange-400" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">4+</h3>
+              <p className="text-gray-600">Années d'Excellence</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="h-8 w-8 text-orange-400" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">50+</h3>
+              <p className="text-gray-600">Clients Satisfaits</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Globe className="h-8 w-8 text-orange-400" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">RDC</h3>
+              <p className="text-gray-600">Présence Nationale</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Indicateur de scroll */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
